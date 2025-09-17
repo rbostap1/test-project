@@ -1,0 +1,134 @@
+body {
+    margin: 0;
+    font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+    /* Modern animated gradient background */
+    background: linear-gradient(120deg, #1e3c72 0%, #2a5298 25%, #e96443 75%, #904e95 100%);
+    background-size: 200% 200%;
+    animation: gradientBG 18s ease-in-out infinite;
+    min-height: 100vh;
+    color: #222;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Glassmorphism effect for header, main, and footer */
+.header, .main, .footer {
+    backdrop-filter: blur(12px) saturate(180%);
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
+    background: rgba(255,255,255,0.18);
+    border-radius: 18px;
+    box-shadow: 0 8px 32px 0 rgba(30,60,114,0.18);
+    border: 1px solid rgba(255,255,255,0.3);
+}
+
+/* Header styling */
+.header {
+    text-align: center;
+    padding: 2.5rem 0 1.5rem 0;
+    color: #fff;
+    background: rgba(30, 60, 114, 0.35);
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 8px rgba(30,60,114,0.2);
+}
+
+/* Main card styling */
+.main {
+    max-width: 750px;
+    margin: 2.5rem auto;
+    padding: 2.5rem 2rem;
+    border-radius: 18px;
+    box-shadow: 0 4px 32px rgba(30,60,114,0.18);
+    transition: box-shadow 0.3s, transform 0.3s;
+    position: relative;
+    z-index: 1;
+}
+
+.main:hover {
+    box-shadow: 0 8px 48px rgba(30,60,114,0.28);
+    transform: translateY(-4px) scale(1.02);
+}
+
+.main h2 {
+    color: #904e95;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1.2rem;
+    letter-spacing: 1px;
+}
+
+.main p, .main li {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: #333;
+}
+
+/* Fancy button style */
+.button, button, input[type="submit"] {
+    background: linear-gradient(90deg, #e96443 0%, #904e95 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(144,78,149,0.15);
+    transition: background 0.3s, transform 0.2s;
+}
+
+.button:hover, button:hover, input[type="submit"]:hover {
+    background: linear-gradient(90deg, #904e95 0%, #e96443 100%);
+    transform: scale(1.05);
+}
+
+/* Footer styling */
+.footer {
+    text-align: center;
+    padding: 1.2rem 0;
+    color: #fff;
+    background: rgba(30, 60, 114, 0.35);
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    font-size: 1.1rem;
+    border-radius: 0 0 18px 18px;
+    box-shadow: 0 -2px 16px rgba(30,60,114,0.08);
+}
+
+/* Responsive design */
+@media (max-width: 900px) {
+    .main {
+        max-width: 95vw;
+        padding: 2rem 1rem;
+    }
+    .header {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .main {
+        padding: 1.2rem 0.5rem;
+    }
+    .header {
+        font-size: 1.5rem;
+        padding: 1.5rem 0 1rem 0;
+    }
+    .footer {
+        font-size: 1rem;
+        padding: 0.8rem 0;
+    }
+}
